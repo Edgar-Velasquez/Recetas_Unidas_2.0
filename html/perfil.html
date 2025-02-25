@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="/styles/stylePerfil.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de perfil -->
+        <section id="profileSection">
+            <h1>{username}</h1>
+            <button id="profilePictureButton">
+                <img id="profilePicture" src="{profilePicture}" alt="Foto de perfil">
+            </button>
+            {#if desc}
+                <p id="descripcion">{desc}</p>
+            {/if}
+        </section>
+
+        <!-- Sección de publicaciones -->
+        <section id="publicacion_section">
+            <h2>Publicaciones</h2>
+            <div id="publicaciones_container">
+                {#each dataRecetas as receta}
+                    <div class="publicacion">
+                        <div class="publicacion_info">
+                            <h3>{receta.tituloreceta}</h3>
+                            <span>{receta.descripcionreceta}</span>
+                            <p><span>Tiempo de preparación:</span> {receta.tiempopreparacionreceta} minutos</p>
+                            <p><span>Dificultad:</span> {receta.dificultadreceta}</p>
+                        </div>
+                        <div class="publicacion_imagen">
+                            <img alt="{receta.tituloreceta}" src="{receta.imagenReceta}">
+                        </div>
+                        <div class="recipeButtonContainer">
+                            <button class="recipeButton" onclick="window.location.href='/receta/{receta.idreceta}'">
+                                Ver Receta
+                            </button>
+                        </div>
+                    </div>
+                {/each}
+            </div>
+        </section>
+    </div>
+</body>
+</html>

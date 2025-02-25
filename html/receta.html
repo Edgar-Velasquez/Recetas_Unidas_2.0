@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{tituloReceta}</title>
+    <link rel="stylesheet" href="/styles/styleReceta.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de la receta -->
+        <section id="recetaSection">
+            <h1>{tituloReceta}</h1>
+            <img src="{imagenReceta}" alt="{tituloReceta}" id="imagenReceta-{idreceta}" class="imagenReceta">
+        </section>
+
+        <!-- Sección de descripción -->
+        <section id="descripcion_section">
+            <h2>Descripción</h2>
+            <p><strong>Tiempo de preparación:</strong> {tiempopreparacionreceta} minutos</p>
+            <p><strong>Dificultad:</strong> {dificultadreceta}</p>
+            <p>{desc}</p>
+        </section>
+    </div>
+</body>
+</html>

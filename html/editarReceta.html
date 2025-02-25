@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Receta</title>
+    <link rel="stylesheet" href="/styles/styleEditarReceta.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de la receta -->
+        <section id="recetaSection">
+            <form>
+                <!-- Campo para editar el título de la receta -->
+                <div>
+                    <label for="tituloReceta"><b>Título de la receta:</b></label>
+                    <input
+                        type="text"
+                        id="tituloReceta"
+                        placeholder="Título de la receta"
+                        value="{tituloReceta}"
+                        required
+                    >
+                </div>
+                <img class="imagenReceta" alt="{tituloReceta}" id="imagenReceta-{idreceta}">
+            </form>
+        </section>
+
+        <!-- Sección de descripción y formulario -->
+        <section id="descripcion_section">
+            <form>
+                <!-- Encabezado con botones de acción -->
+                <div class="formHeader">
+                    <h1>Descripción</h1>
+                    <div class="buttonWrapper">
+                        <button class="iconButton" type="button" onclick="window.location.href='/perfil'">
+                            <img src="/icons/close.svg" alt="Cancelar" title="Cancelar">
+                        </button>
+                        <button class="iconButton" type="submit">
+                            <img src="/icons/save.svg" alt="Guardar" title="Guardar">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Campo: Tiempo de preparación -->
+                <div>
+                    <label for="tiempoPreparacion"><b>Tiempo de preparación (minutos):</b></label>
+                    <input
+                        type="number"
+                        id="tiempoPreparacion"
+                        placeholder="Tiempo en minutos"
+                        required
+                        min="1"
+                    >
+                </div>
+
+                <!-- Campo: Dificultad -->
+                <div>
+                    <label for="dificultad"><b>Dificultad:</b></label>
+                    <select id="dificultad" required>
+                        <option value="Facil">Fácil</option>
+                        <option value="Medio">Medio</option>
+                        <option value="Dificil">Difícil</option>
+                    </select>
+                </div>
+
+                <!-- Campo: Número de raciones -->
+                <div>
+                    <label for="numeroRaciones"><b>Raciones:</b></label>
+                    <input
+                        type="number"
+                        id="numeroRaciones"
+                        placeholder="Número de raciones"
+                        required
+                        min="1"
+                    >
+                </div>
+
+                <!-- Campo: Descripción -->
+                <div>
+                    <label for="descripcionTextArea"><b>Descripción:</b></label>
+                    <textarea
+                        id="descripcionTextArea"
+                        rows="10"
+                        placeholder="Escribe la descripción de la receta..."
+                    ></textarea>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

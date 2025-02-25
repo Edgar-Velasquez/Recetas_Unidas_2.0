@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Receta</title>
+    <link rel="stylesheet" href="/styles/styleCrearReceta.css">
+</head>
+<body>
+    <!-- Botón para volver atrás -->
+    <a href="/feed">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20ZM12 11H16V13H12V16L8 12L12 8V11Z"/>
+        </svg>
+        Volver atrás
+    </a>
+
+    <!-- Contenedor del formulario -->
+    <div class="formWrapper">
+        <form>
+            <h2>Creación de platillo</h2>
+
+            <!-- Campo: Nombre del platillo -->
+            <div>
+                <label for="nombrePlatillo">Nombre platillo:</label>
+                <input type="text" id="nombrePlatillo" placeholder="Nombre del platillo" required>
+            </div>
+
+            <!-- Campo: Descripción del platillo -->
+            <div>
+                <label for="descripcionPlatillo">Descripción:</label>
+                <textarea id="descripcionPlatillo" placeholder="Descripción del platillo" required></textarea>
+            </div>
+
+            <!-- Campo: Imagen de la receta -->
+            <div>
+                <label for="imagenReceta">Imagen de la receta:</label>
+                <input type="file" id="imagenReceta" accept="image/*">
+            </div>
+
+            <!-- Campo: Tiempo de preparación -->
+            <div>
+                <label for="tiempoPreparacion">Tiempo de preparación (minutos):</label>
+                <input type="number" id="tiempoPreparacion" placeholder="Tiempo en minutos" required min="1">
+            </div>
+
+            <!-- Campo: Dificultad -->
+            <div>
+                <label for="dificultad">Dificultad:</label>
+                <select id="dificultad" required>
+                    <option value="Facil">Fácil</option>
+                    <option value="Medio">Medio</option>
+                    <option value="Dificil">Difícil</option>
+                </select>
+            </div>
+
+            <!-- Campo: Número de raciones -->
+            <div>
+                <label for="numeroRaciones">Número de raciones:</label>
+                <input type="number" id="numeroRaciones" placeholder="Número de raciones" required min="1">
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="buttonWrapper">
+                <button type="submit">Agregar Receta</button>
+                <button type="reset">Reiniciar Receta</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

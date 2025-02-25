@@ -1,0 +1,154 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.white {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.registerContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Panel izquierdo: Logo */
+.green {
+    background-color: #28a745;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.green .logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Panel derecho: Formulario de registro */
+.right_pane {
+    flex: 2;
+}
+
+.right_pane h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#form label {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+#form input[type="text"],
+#form input[type="password"],
+#form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#form input[type="text"]:focus,
+#form input[type="password"]:focus,
+#form input[type="email"]:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+.footer-form {
+    margin-top: 20px;
+}
+
+.footer-form button {
+    padding: 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.footer-form button:hover {
+    background-color: #218838;
+}
+
+#mensaje_registro {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#mensaje_registro p {
+    font-size: 14px;
+    color: #555;
+}
+
+#mensaje_registro a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#mensaje_registro a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .registerContainer {
+        flex-direction: column;
+    }
+
+    .green {
+        margin-bottom: 20px;
+    }
+
+    .right_pane h2 {
+        font-size: 20px;
+    }
+
+    #form input[type="text"],
+    #form input[type="password"],
+    #form input[type="email"] {
+        font-size: 14px;
+    }
+
+    .footer-form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

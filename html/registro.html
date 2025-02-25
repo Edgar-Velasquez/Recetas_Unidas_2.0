@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="/styles/styleRegistro.css">
+</head>
+<body>
+    <main class="white">
+        <section class="registerContainer">
+            <!-- Panel izquierdo: Logo -->
+            <section class="green left_pane">
+                <img src="{logo}" alt="Logo" class="logo">
+            </section>
+
+            <!-- Panel derecho: Formulario de registro -->
+            <section class="right_pane">
+                <h2>Registro de usuario</h2>
+                <form id="form">
+                    <div>
+                        <label for="username">Usuario:</label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="usuario"
+                            placeholder="Mínimo 8 caracteres"
+                            minlength="8"
+                            required
+                        >
+                    </div>
+                    <div>
+                        <label for="password">Contraseña:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Mínimo 6 caracteres"
+                            minlength="6"
+                            required
+                        >
+                    </div>
+                    <div>
+                        <label for="repeat_password">Repetir contraseña:</label>
+                        <input
+                            type="password"
+                            id="repeat_password"
+                            name="repeat_password"
+                            placeholder="Mínimo 6 caracteres"
+                            minlength="6"
+                            required
+                        >
+                    </div>
+                    <div>
+                        <label for="email">Correo electrónico:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Correo electrónico"
+                            required
+                        >
+                    </div>
+                    <div class="footer-form">
+                        <button type="submit">Registrarte</button>
+                    </div>
+                    <div id="mensaje_registro">
+                        <p>¿Ya tienes una cuenta? <a href="/">¡Ingresa ahora mismo!</a></p>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
