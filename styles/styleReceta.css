@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #F2D6B3;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -37,6 +37,57 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+#recetaSection p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.reacciones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.btn-like, .btn-dislike, .btn-comentarios {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-like {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-like:hover {
+    background-color: #218838;
+}
+
+.btn-dislike {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-dislike:hover {
+    background-color: #c82333;
+}
+
+.btn-comentarios {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-comentarios:hover {
+    background-color: #0056b3;
+}
+
 /* Sección de descripción */
 #descripcion_section {
     margin-top: 20px;
@@ -58,6 +109,59 @@ body {
     color: #333;
 }
 
+/* Estilos para la ventana de comentarios */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenido {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.cerrar {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.comentarios-lista {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.form-comentario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.form-comentario button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* Estilos responsivos */
 @media (max-width: 600px) {
     .container {
@@ -74,5 +178,15 @@ body {
 
     #descripcion_section p {
         font-size: 14px;
+    }
+
+    .reacciones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-like, .btn-dislike, .btn-comentarios {
+        width: 100%;
+        justify-content: center;
     }
 }

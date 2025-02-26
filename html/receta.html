@@ -12,6 +12,12 @@
         <section id="recetaSection">
             <h1>{tituloReceta}</h1>
             <img src="{imagenReceta}" alt="{tituloReceta}" id="imagenReceta-{idreceta}" class="imagenReceta">
+            <p><strong>Publicado por:</strong> {nombreUsuario}</p>
+            <div class="reacciones">
+                <button class="btn-like">👍 {likes}</button>
+                <button class="btn-dislike">👎 {dislikes}</button>
+                <button class="btn-comentarios" onclick="mostrarComentarios()">💬 {comentarios} Comentarios</button>
+            </div>
         </section>
 
         <!-- Sección de descripción -->
@@ -22,5 +28,22 @@
             <p>{desc}</p>
         </section>
     </div>
+
+    <!-- Ventana de comentarios -->
+    <div id="modalComentarios" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2>Comentarios</h2>
+            <div class="comentarios-lista">
+                <!-- Comentarios se cargarán aquí -->
+            </div>
+            <form class="form-comentario">
+                <textarea placeholder="Escribe un comentario..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/javascript/scriptComentarios.js"></script>
 </body>
 </html>
