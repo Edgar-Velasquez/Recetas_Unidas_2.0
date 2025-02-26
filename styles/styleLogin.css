@@ -78,7 +78,7 @@ body {
 
 .right_pane input[type="email"]:focus,
 .right_pane input[type="password"]:focus {
-    border-color: #28a745;
+    border-color: #D95407;
     outline: none;
 }
 
