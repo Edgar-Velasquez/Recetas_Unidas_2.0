@@ -39,7 +39,6 @@
                         <button class="btn-dislike">👎 2</button>
                     </div>
                     <button class="btn-comentarios" onclick="mostrarComentarios(1)">💬 Comentarios</button>
-                    <a href="/receta/1" class="btn-ver-receta">Ver Receta</a>
                 </div>
 
                 <!-- Otras recetas pueden ser añadidas dinámicamente aquí -->
@@ -66,25 +65,6 @@
         <p>&copy; 2025 Recetas. Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        function mostrarComentarios(recetaId) {
-            // Aquí puedes cargar los comentarios de la receta con el ID recetaId
-            const modal = document.getElementById('modalComentarios');
-            modal.style.display = 'block';
-        }
-
-        function cerrarModal() {
-            const modal = document.getElementById('modalComentarios');
-            modal.style.display = 'none';
-        }
-
-        // Cerrar modal si se hace clic fuera de él
-        window.onclick = function(event) {
-            const modal = document.getElementById('modalComentarios');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        }
-    </script>
+    <script src="/javascript/scriptComentarios.js"></script>
 </body>
 </html>
