@@ -35,7 +35,11 @@
             <!-- Campo: Imagen de la receta -->
             <div>
                 <label for="imagenReceta">Imagen de la receta:</label>
-                <input type="file" id="imagenReceta" accept="image/*">
+                <div class="file-upload">
+                    <input type="file" id="imagenReceta" accept="image/*" onchange="mostrarVistaPrevia(event)">
+                    <label for="imagenReceta" class="file-upload-label">Elegir archivo</label>
+                    <div id="vistaPrevia" class="vista-previa"></div>
+                </div>
             </div>
 
             <!-- Campo: Tiempo de preparación -->
@@ -67,5 +71,7 @@
             </div>
         </form>
     </div>
+
+    <script src="/javascript/scriptVistaPrevia.js"></script>
 </body>
 </html>
