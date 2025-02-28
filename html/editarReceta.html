@@ -22,7 +22,17 @@
                         required
                     >
                 </div>
-                <img class="imagenReceta" alt="{tituloReceta}" id="imagenReceta-{idreceta}">
+                <img class="imagenReceta" src="/img/chVerdes.jpeg" alt="{tituloReceta}" id="imagenReceta-{idreceta}">
+                
+                <!-- Campo: Imagen de la receta -->
+                <div>
+                    <label for="imagenReceta">Imagen de la receta:</label>
+                    <div class="file-upload">
+                        <input type="file" id="imagenReceta" accept="image/*" onchange="mostrarVistaPrevia(event)">
+                        <label for="imagenReceta" class="file-upload-label">Elegir archivo</label>
+                        <div id="vistaPrevia" class="vista-previa"></div>
+                    </div>
+                </div>
             </form>
         </section>
 
@@ -33,11 +43,11 @@
                 <div class="formHeader">
                     <h1>Descripción</h1>
                     <div class="buttonWrapper">
-                        <button class="iconButton" type="button" onclick="window.location.href='/perfil'">
-                            <img src="/icons/close.svg" alt="Cancelar" title="Cancelar">
+                        <button class="iconButton" type="button" onclick="window.location.href='/perfil'" id="btnCancelar">
+                            <img src="/img/imgBotonCancelar.png" alt="Cancelar" title="Cancelar"> Cancelar
                         </button>
-                        <button class="iconButton" type="submit">
-                            <img src="/icons/save.svg" alt="Guardar" title="Guardar">
+                        <button class="iconButton" type="submit" id="btnGuardar">
+                            <img src="/img/imgBotonGuardar.png" alt="Guardar" title="Guardar"> Guardar
                         </button>
                     </div>
                 </div>
@@ -88,5 +98,16 @@
             </form>
         </section>
     </div>
+    <script>
+        function mostrarVistaPrevia(event) {
+            const vistaPrevia = document.getElementById('vistaPrevia');
+            const archivo = event.target.files[0];
+            const lector = new FileReader();
+            lector.onload = function(e) {
+                vistaPrevia.innerHTML = `<img src="${e.target.result}" alt="Vista previa" style="max-width: 40%; height: auto;">`;
+            }
+            lector.readAsDataURL(archivo);
+        }
+    </script>
 </body>
 </html>
