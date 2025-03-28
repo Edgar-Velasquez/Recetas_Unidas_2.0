@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Receta</title>
-    <link rel="stylesheet" href="/styles/styleEditarReceta.css">
+    <link rel="stylesheet" href="/app/static/css/styleEditarReceta.css">
 </head>
 <body>
     <div class="container">
@@ -22,7 +22,7 @@
                         required
                     >
                 </div>
-                <img class="imagenReceta" src="/img/chVerdes.jpeg" alt="{tituloReceta}" id="imagenReceta-{idreceta}">
+                <img class="imagenReceta" src="/app/static/img/chVerdes.jpeg" alt="{tituloReceta}" id="imagenReceta-{idreceta}">
                 
                 <!-- Campo: Imagen de la receta -->
                 <div>
@@ -44,10 +44,10 @@
                     <h1>Descripción</h1>
                     <div class="buttonWrapper">
                         <button class="iconButton" type="button" onclick="window.location.href='/perfil'" id="btnCancelar">
-                            <img src="/img/imgBotonCancelar.png" alt="Cancelar" title="Cancelar"> Cancelar
+                            <img src="/app/static/img/imgBotonCancelar.png" alt="Cancelar" title="Cancelar"> Cancelar
                         </button>
                         <button class="iconButton" type="submit" id="btnGuardar">
-                            <img src="/img/imgBotonGuardar.png" alt="Guardar" title="Guardar"> Guardar
+                            <img src="/app/static/img/imgBotonGuardar.png" alt="Guardar" title="Guardar"> Guardar
                         </button>
                     </div>
                 </div>
@@ -98,16 +98,6 @@
             </form>
         </section>
     </div>
-    <script>
-        function mostrarVistaPrevia(event) {
-            const vistaPrevia = document.getElementById('vistaPrevia');
-            const archivo = event.target.files[0];
-            const lector = new FileReader();
-            lector.onload = function(e) {
-                vistaPrevia.innerHTML = `<img src="${e.target.result}" alt="Vista previa" style="max-width: 40%; height: auto;">`;
-            }
-            lector.readAsDataURL(archivo);
-        }
-    </script>
+    <script src="/app/static/js/scriptVistaPreviaER.js"></script>
 </body>
 </html>
